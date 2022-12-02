@@ -32,7 +32,7 @@ function submitHandler(e){
                 placeholder="Search by name:"
                 onChange={(e) => inputChangeHandler(e)}
             />
-            <StyledButton type="submit" onClick={(e) => submitHandler(e)}><StyledImg src={image} alt=''/></StyledButton>
+            <StyledButton type="submit" onClick={(e) => submitHandler(e)}><StyledImg src={image} alt='Image'/></StyledButton>
         </div>
     )
 }

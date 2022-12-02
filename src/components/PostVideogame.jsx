@@ -124,7 +124,7 @@ export default function PostVideogame(){
     return(
         <FormDiv>
             <StyledA href="/home">
-                <StyledReturn src={image} alt="" />
+                <StyledReturn src={image} alt="Image" />
             </StyledA>
             <StyledH1>Post your own videogame!</StyledH1>
             <StyledForm onSubmit={submitHandler}>

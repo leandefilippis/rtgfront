@@ -37,9 +37,9 @@ export default function VideogameDetail({ match }) {
   return (
     <BodyDiv>
       <StyledA href="/home">
-        <StyledReturn src={image} alt="" />
+        <StyledReturn src={image} alt="Image" />
       </StyledA>
-      <Image src={detailedVideogame?.image} alt={""} />
+      <Image src={detailedVideogame?.image} alt={"Image"} />
       <DetailDiv>
         <NlrDiv>
           <Name>{detailedVideogame?.name}</Name>

@@ -15,7 +15,7 @@ export default function Card({ id, name, image, rating, genres }) {
     <>
       <StyledCard>
         <InsetShadow>
-          <CardImage src={image} alt="" width="450px" height="250px" />
+          <CardImage src={image} alt="Image" width="450px" height="250px" />
         </InsetShadow>
         <NameRatingDiv>
           <Name>{name}</Name>
