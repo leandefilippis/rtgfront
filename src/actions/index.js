@@ -12,7 +12,7 @@ const FILTER_BY_CREATION = 'FILTER_BY_CREATION'
 
 export function getVideogames(){
     return async function(dispatch){
-        const data = await axios("https://ready-to-game.up.railway.app/videogames")
+        const data = await axios("/videogames")
         return dispatch({
             type: GET_VIDEOGAMES,
             payload: data.data
@@ -23,7 +23,7 @@ export function getVideogames(){
 export function getVideogameNames(name){
     return async function(dispatch){
         try {
-            const data = await axios.get("https://ready-to-game.up.railway.app/videogames?name=" + name)
+            const data = await axios.get("/videogames?name=" + name)
             if(!data) throw Error
             return dispatch({
                 type: GET_VIDEOGAME_NAMES,
@@ -40,7 +40,7 @@ export function getVideogameNames(name){
 
 export function getVideogameDetail(id){
     return async function(dispatch){
-        await axios.get(`https://ready-to-game.up.railway.app/videogames/${id}`)
+        await axios.get(`/videogames/${id}`)
         .then(response => {
             dispatch({
                 type: GET_VIDEOGAME_DETAIL,
@@ -59,7 +59,7 @@ export function clearDetail(){
 export function postVideogame(payload){
     return async function(dispatch){
         try{
-            const data = await axios.post("https://ready-to-game.up.railway.app/videogames", payload)
+            const data = await axios.post("/videogames", payload)
             return data
         } catch(err) {
             alert("Error 404")
@@ -74,7 +74,7 @@ export function postVideogame(payload){
 
 export function getGenres(){
     return async function(dispatch){
-        const data = await axios("https://ready-to-game.up.railway.app/genres")
+        const data = await axios("/genres")
         return dispatch({
             type: GET_GENRES,
             payload: data.data
@@ -84,7 +84,7 @@ export function getGenres(){
 
 export function getPlatforms(){
     return async function(dispatch){
-        const data = await axios("https://ready-to-game.up.railway.app/videogames")
+        const data = await axios("/videogames")
         const aux = []
         let mapped = []
 
