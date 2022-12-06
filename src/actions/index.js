@@ -58,12 +58,8 @@ export function clearDetail(){
 
 export function postVideogame(payload){
     return async function(dispatch){
-        try{
             const data = await axios.post("https://ready-to-game.up.railway.app/videogames", payload)
             return data
-        } catch(err) {
-            alert("Error 404")
-        }
 
         // return dispatch({
         //     type: POST_VIDEOGAME,
